@@ -1,0 +1,19 @@
+# .NET build output
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Node / front-end
+node_modules/
+web/dist/
+web/.vite/
+*.log
+
+# macOS
+.DS_Store

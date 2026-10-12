@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>Cameras.Cli</RootNamespace>
+    <AssemblyName>Search</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Cameras.Infrastructure/Cameras.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <!--
+    The CSV is the application's datastore, so it travels with the build output.
+    This is what lets the CLI and the API find it without an absolute path.
+  -->
+  <ItemGroup>
+    <Content Include="../../data/cameras-defb.csv"
+             Link="data/cameras-defb.csv"
+             CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
